@@ -40,14 +40,14 @@ pipeline {
                     terraform -chdir=src/main/config/terraform output --raw "urotaxidbendpoint" ? dbhosts
                 '''
             }
-       }
-       post {
-            failure {
-                sh '''
-                terraform -chdir=src/main/terraform destroy
-                '''
+            post {
+                failure {
+                    sh '''
+                    terraform -chdir=src/main/terraform destroy
+                    '''
+                }
             }
-       } 
+        } 
        stage('prepare') {
             steps {
                 sh '''
