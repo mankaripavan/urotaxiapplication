@@ -43,7 +43,7 @@ pipeline {
             post {
                 failure {
                     sh '''
-                    terraform -chdir=src/main/terraform destroy
+                    terraform -chdir=src/main/config/terraform destroy
                     '''
                 }
             }
