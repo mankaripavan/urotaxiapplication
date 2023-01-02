@@ -4,7 +4,7 @@ pipeline {
     }
     environment {
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY')
-        AWS_SECRETE_ACCESS_KEY = credentials('AWS_SECRETE_ACCESS_KEY')
+        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
         UROTAXI_DB_USER = 'root'
         UROTAXI_DB_PSW = credentials('UROTAXI_DB_PSW')
         ANSIBLE_HOST_KEY_CHECKING = "false"
