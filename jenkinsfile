@@ -23,7 +23,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git(url: 'https://github.com/mankaripavan/urotaxiapplication.git', credentialsID: 'urotaxigitpat')
+                git(url: 'https://github.com/mankaripavan/urotaxiapplication.git', credentialsId: 'urotaxigitpat')
             }
         }
         stage('test') {
