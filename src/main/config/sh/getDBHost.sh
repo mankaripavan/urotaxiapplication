@@ -1,2 +1,2 @@
 #!/bin/bash
-cat dbHosts | sed -d ":" -f1
+cat dbHosts | cut -d ":" -f1
