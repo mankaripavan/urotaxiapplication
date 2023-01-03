@@ -23,6 +23,7 @@ resource "aws_vpc" "urotaxivpc" {
 resource "aws_subnet" "urotaxipubsn1" {
     cidr_block = var.urotaxipubsn1_cidr
     vpc_id = aws_vpc.urotaxivpc.id
+    availability_zone = "ap-south-1a"
     tags = {
       "Name" = "urotaxipubsn1"
     }  
@@ -30,6 +31,7 @@ resource "aws_subnet" "urotaxipubsn1" {
 resource "aws_subnet" "urotaxiprvsn2" {
     cidr_block = var.urotaxiprvsn2_cidr
     vpc_id = aws_vpc.urotaxivpc.id
+    availability_zone = "ap-south-1b"
     tags = {
       "Name" = "urotaxiprvsn2"
     } 
@@ -37,6 +39,7 @@ resource "aws_subnet" "urotaxiprvsn2" {
 resource "aws_subnet" "urotaxiprvsn3" {
     cidr_block = var.urotaxiprvsn3_cidr
     vpc_id = aws_vpc.urotaxivpc.id
+    availability_zone = "ap-south-1a"
     tags = {
       "Name" = "urotaxiprvsn3"
     } 
