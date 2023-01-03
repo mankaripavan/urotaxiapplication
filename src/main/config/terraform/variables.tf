@@ -22,6 +22,9 @@ variable "db_username" {
 variable "db_password" {
     type = string  
 }
+variable "urotaxi_public_key" {
+    type = string  
+}
 variable "urotaxi_ami" {
     type = string  
 }
