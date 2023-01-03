@@ -8,7 +8,6 @@ pipeline {
         UROTAXI_DB_USER = 'root'
         UROTAXI_DB_PSW = credentials('UROTAXI_DB_PSW')
         ANSIBLE_HOST_KEY_CHECKING = "false"
-
     }
     options {
         buildDiscarder (logRotator(numToKeepStr: '3'))
