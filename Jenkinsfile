@@ -36,7 +36,7 @@ pipeline {
                     terraform -chdir=src/main/config/terraform init
                     terraform -chdir=src/main/config/terraform apply --auto-approve
                     terraform -chdir=src/main/config/terraform output --raw "urotaxiec2public_ip" > hosts
-                    terraform -chdir=src/main/config/terraform output --raw "urotaxidbendpoint" > dbhosts
+                    terraform -chdir=src/main/config/terraform output --raw "urotaxidbendpoint" > dbHosts
                 '''
             }
             post {
@@ -52,7 +52,7 @@ pipeline {
                 sh '''
                     sed -i "s|#dbusername#|$UROTAXI_DB_USER|g" src/main/resources/application.yml
                     sed -i "s|#dbpassword#|$UROTAXI_DB_PSW|g" src/main/resources/application.yml
-                    dbHost = $(dbHosts)
+                    dbHost=$(dbHosts)
                     sed -i "s|#dbhost#|$dbHost|g" src/mian/resources/application.yml
                 '''
             }    
