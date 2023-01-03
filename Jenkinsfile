@@ -35,14 +35,14 @@ pipeline {
                 sh '''
                     terraform -chdir=src/main/config/terraform init
                     terraform -chdir=src/main/config/terraform apply --auto-approve
-                    terraform -chdir=src/main/config/terraform otput --raw "urotaxiec2public_ip" > hosts
+                    terraform -chdir=src/main/config/terraform output --raw "urotaxiec2public_ip" > hosts
                     terraform -chdir=src/main/config/terraform output --raw "urotaxidbendpoint" > dbhosts
                 '''
             }
             post {
                 failure {
                     sh '''
-                    terraform -chdir=src/main/config/terraform destroy
+                    terraform -chdir=src/main/config/terraform --auto-approve destroy
                     '''
                 }
             }
