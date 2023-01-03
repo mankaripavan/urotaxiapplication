@@ -52,7 +52,7 @@ pipeline {
                 sh '''
                     sed -i "s|#dbusername#|$UROTAXI_DB_USER|g" src/main/resources/application.yml
                     sed -i "s|#dbpassword#|$UROTAXI_DB_PSW|g" src/main/resources/application.yml
-                    dbHost=$(dbHosts)
+                    dbHost=$(cat dbHosts)
                     sed -i "s|#dbhost#|$dbHost|g" src/mian/resources/application.yml
                 '''
             }    
