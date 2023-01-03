@@ -35,9 +35,9 @@ pipeline {
             steps {
                 sh '''
                     terraform -chdir=src/main/config/terraform init
-                    terraform -chdir=src/main/config/terraform apply --auto-aprove
+                    terraform -chdir=src/main/config/terraform apply --auto-approve
                     terraform -chdir=src/main/config/terraform otput --raw "urotaxiec2public_ip" > hosts
-                    terraform -chdir=src/main/config/terraform output --raw "urotaxidbendpoint" ? dbhosts
+                    terraform -chdir=src/main/config/terraform output --raw "urotaxidbendpoint" > dbhosts
                 '''
             }
             post {
