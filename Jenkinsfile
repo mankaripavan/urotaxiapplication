@@ -69,7 +69,7 @@ pipeline {
                     env.DB_HOST = sh(returnStdout: true, script: "src/main/config/sh/getDBHost.sh").trim()
                     echo "env.DB_HOST is '${DB_HOST}'"
                 }
-                ansiblePlaybook(playbook:'src/main/config/ansible/urotaxi-playbook.yml', credentialsId: 'aws_key', inventory: 'hosts')
+                ansiblePlaybook(playbook: 'src/main/config/ansible/urotaxi-playbook.yml', credentialsId: 'aws_key', inventory: 'hosts')
             }
        }
     }
