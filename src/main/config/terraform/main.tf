@@ -119,7 +119,7 @@ resource "aws_db_instance" "urotaxidb" {
     skip_final_snapshot = true
     db_subnet_group_name = aws_db_subnet_group.urotaxidbsng.name  
 }
-resource "aws_key_pair" "urotaxikp" {
+resource "aws_key_pair" "urotaxikey" {
     key_name = "urotaxikey"
     public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNpk1VltTgSUD9KSpCC4bJwnuF+sZ5IqsPPfNtqq8o3h2qHLyzR2508qM/vk7qBBwBhrxWdrEZshhEecZgGN6F+9NqpzLk+Uxqv0w67S7e8YUM3hxWnzMK9htaKW98IryfdzbM4lucuCkU4GnM7VsJmjm+CYr3l2wfLsCBxHtMsO09tIrKOq1cQLkrPKIULSuujf8xnXdU4Lunwb5FIrBk8DKiPGzVsWpRk73T6YWG1ew2sWKXxPo33s4E68Xw+s7P1/9liG6XyN1NKysSpaPoAJJ/fWHyU/7qSUfSvT68IKg1S1UXYYsIbKXOySFRNgFfCg1Xc625FyLCv3jXUPpWoEkHlvMD1sJPGdAJkxeIiASoZSVGD7G+mfbR6ABX1ReLieAvPQbwOBsiX3MLawnOOdVa8VpcTsbUfs6Jy2/lKKv1qYhbkifR1aMN0B9y61I2nfXrzI+iHEVr9NV41ZivtIRQdMIfnv6Pz389oZq9J9lBY0bu81pQxwqSjWrUkRk= hii@Pavan"  
 }
