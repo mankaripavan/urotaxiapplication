@@ -62,7 +62,7 @@ resource "aws_route_table_association" "urotaxiigwrtassociation" {
     route_table_id = aws_route_table.urotaxiigwrt.id 
 }
 resource "aws_security_group" "urotaxiec2sg" {
-    vpc_id = aws_vpc.urotaxivpc
+    vpc_id = aws_vpc.urotaxivpc.id
     ingress {
         from_port = "8080"
         to_port = "8080"
